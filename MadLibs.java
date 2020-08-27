@@ -44,21 +44,21 @@ public class MadLibs {
 			while(!(char)i.equals(" ")){
 				next+=char(i);
 			}
-			listString.add(next);
+			verbs.add(next);
 		}
 		br.close();
 
 		//3. Read an adjectives.txt file and store its list of adjectives into an arraylist.
 		BufferedReader br = new BufferedReader(new FileReader("adjectives.txt"));
  		while (br.ready()) {
- 			adj.add(br.readLine());
+ 			adjectives.add(br.readLine());
  		}
  		br.close();
 
 		//4. Read an adverbs.txt file and store its list of adverbs into an arraylist.
 		BufferedReader br4 = new BufferedReader(new FileReader("adverbs.txt"));
 		while (br4.ready()) {
-			adj.add(br4.readLine());
+			adverbs.add(br4.readLine());
 		}
 		br4.close();
 
