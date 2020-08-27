@@ -27,40 +27,32 @@ public class MadLibs {
 		String total = "";
 
 		//1. Read a nouns.txt file and store its list of nouns into an arraylist.
- 		BufferedReader reader = new BufferedReader(new FileReader("nouns.txt"));
- 		String str = "";
- 		while (reader.ready()) {
- 			str = reader.readLine();
- 			nouns.add(str);
+		BufferedReader br1 = new BufferedReader(new FileReader("nouns.txt"));
+ 		while (br1.ready()) {
+ 		nouns.add(br1.readLine());
  		}
- 		reader.close();
+ 		br1.close();
 
 		//2. Read a verbs.txt file and store its list of verbs into an arraylist.
-		FileReader fr = new FileReader("verbs.txt");
-		BufferedReader br = new BufferedReader(fr);
-
-		while((i=br.read())!=-1){
-			String next=new String("");
-			while(!(char)i.equals(" ")){
-				next+=char(i);
-			}
-			verbs.add(next);
-		}
-		br.close();
+		BufferedReader br2 = new BufferedReader(new FileReader("verbs.txt"));
+ 		while (br2.ready()) {
+ 			verbs.add(br.readLine());
+ 		}
+ 		br2.close();
 
 		//3. Read an adjectives.txt file and store its list of adjectives into an arraylist.
-		BufferedReader br = new BufferedReader(new FileReader("adjectives.txt"));
- 		while (br.ready()) {
- 			adjectives.add(br.readLine());
+		BufferedReader br3 = new BufferedReader(new FileReader("adjectives.txt"));
+ 		while (br3.ready()) {
+ 			adjectives.add(br3.readLine());
  		}
- 		br.close();
+ 		br3.close();
 
 		//4. Read an adverbs.txt file and store its list of adverbs into an arraylist.
 		BufferedReader br4 = new BufferedReader(new FileReader("adverbs.txt"));
 		while (br4.ready()) {
 			adverbs.add(br4.readLine());
 		}
-		br4.close();
+		br.close();
 
 		//5. Prompt user for the name of a file containing a MadLibs story.
 		// Read the story from that file and write it to System.out, but replacing each instance of
